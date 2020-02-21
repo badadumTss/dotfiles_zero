@@ -10,7 +10,8 @@ Esentially:
  - [rofi](https://github.com/davatorium/rofi)
  - [dmenu](https://tools.suckless.org/dmenu/)
  - [sxhkd](https://github.com/baskerville/sxhkd)
-	
+ - [st fork from Luke Smiths](https://github.com/LukeSmithxyz/st)
+ 
 which is everyhing this configuration needs to work.
 I highly recommend:
  - [Emacs](https://www.gnu.org/software/emacs/)
