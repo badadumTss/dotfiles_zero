@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+opts="nothing\nshutdown\nreboot"
+prompt="What should I do?"
+
+choice=$(echo -ne $opts | dmenu_alias -p "What shoud i do?")
+if [ $choice == "shutdown" ]; then
+	shutdown now
+elif [ $choice == "reboot" ]; then
+	reboot
+fi

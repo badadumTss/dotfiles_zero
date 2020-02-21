@@ -1,0 +1,27 @@
+#! /bin/sh
+
+# bspc monitor -d code office graphics mail web
+bspc monitor -d TTY WEB LAB MED 5
+
+# Sets colors, starts polybar
+# ~/gitgets/dots/scripts/colors.sh # actually starting colors is not a good idea
+~/.config/polybar/launch.sh &
+
+# Starts dunst daemon
+# systemctl --user start dunst.service
+
+bspc config border_width         2
+bspc config window_gap           5
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# bspc rule -a firefox desktop='^2'
+# bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Emacs state=tiled
+bspc rule -a Cutter state=tiled
+
+bspc config focused_border_color \#f1fcf9

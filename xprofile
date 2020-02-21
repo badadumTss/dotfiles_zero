@@ -1,0 +1,9 @@
+xrdb merge .Xdefaults
+xset +fp /usr/share/fonts/termsyn
+xset fp rehash
+xsetroot -cursor_name left_ptr &
+sxhkd &
+dunst &
+feh --bg-scale pictures/background.png
+wal -R
+exec bspwm

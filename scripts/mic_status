@@ -1,0 +1,2 @@
+#!/bin/bash
+amixer get Capture | tail -1 | awk '{print $6}' | sed 's/[][]//g'

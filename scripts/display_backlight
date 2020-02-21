@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# changeBacklight
+# copiata spudorata da changeVolume
+
+# Arbitrary but unique message id
+msgId="101"
+
+# Query amixer for the current volume and whether or not the speaker is muted
+backlight="$(xbacklight | awk '{print int($1)}')"
+# Show the backlight notification
+dunstify -a "changeBacklight" -u low -i backlight-changed -r "$msgId" "backlight: ${backlight}%" "$(bar 34 $backlight)"
