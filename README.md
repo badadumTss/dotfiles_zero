@@ -19,10 +19,7 @@ I highly recommend:
 # Install
 ## Setp one:
 Requires: **bspwm**, **sxhkd**, **rofi**, **dmenu** and **polybar**
-	```
-	./install.sh && sudo cp scripts/* /usr/local/bin/
-		
-	```
+``` ./install.sh && sudo cp scripts/* /usr/local/bin/ ```
 `install.sh` backups your old config files moving the each folder to $folder.old inside the `.config` folder and copies the config in this folder. 
 I highly recommend to read the `README.md` file inside the polybar folder, since polybar needs some more configuration. 
 _Not all pcs are created equally!!_
