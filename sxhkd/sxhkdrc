@@ -132,8 +132,9 @@ super + {Left,Down,Up,Right}
 super + e
 	emacs
 
-super + l
-	wi-login > /dev/null 2>&1
+# This fires a script I wrote to log into my network, I don't think you might want it
+# super + l
+# 	wi-login > /dev/null 2>&1
 
 super + r
 	  st -e ranger
