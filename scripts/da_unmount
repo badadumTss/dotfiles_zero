@@ -1,0 +1,16 @@
+#!/bin/sh
+
+check=$(lsblk -l | grep -v sda | grep part | grep -v 'part $')
+if [[ $check == '' ]]; then exit 1; fi
+
+to_unmount=$(echo $check | awk '{print $7}' | dmenu_alias -p "which one should I umount?")
+
+sudo umount $to_unmount && rm -rf $to_unmount
+
+if [ -z $? ]; then
+	dunstify "Something went wrong!"
+else
+	dunstify "Success" Unmounted\ $to_unmount
+fi
+
+rmdir ~/mnt

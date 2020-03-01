@@ -1,0 +1,22 @@
+#!/bin/sh
+
+check=$(lsblk -l | grep -v sda | grep 'part $')
+if [[ $check == '' ]]; then exit 1; fi
+
+to_mount=$(echo $check | awk '{print $1,$4}' | dmenu_alias -p "choose disk to mount" | awk '{print $1}')
+if [[ $to_mount == '' ]]; then exit 1; fi
+
+name=$(lsblk -S | grep ${to_mount::-1} | awk '{print $5}' | dmenu_alias -p "insert mounting name: ")
+
+# echo $to_mount ' '  $name # debug
+
+mkdir -p ~/mnt/$name
+sudo mount /dev/$to_mount ~/mnt/$name
+
+# echo $? # debug
+
+if [ -z $? ]; then
+	dunstify 'Something went wrong!!'
+else
+	dunstify 'Device mounted' ~/mnt/$name
+fi
