@@ -9,9 +9,9 @@ st*depth: 32
 st*borderless: false
 
 ! Colors !
-st.background:  #f5f5f5
-st.foreground:  #0d0d0d
-st.cursorColor: #0d0d0d
+st.background:  #0d0d0d
+st.foreground:  #f5f5f5
+st.cursorColor: #f5f5f5
 st.color0:      #20262C
 st.color1:      #DB86BA
 st.color2:      #74DD91

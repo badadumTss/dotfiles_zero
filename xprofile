@@ -1,6 +1,7 @@
+xrandr --auto --output HDMI1 --mode 1920x1080 --above eDP1
 xrdb merge .Xdefaults
 xsetroot -cursor_name left_ptr &
 sxhkd &
 dunst &
-feh --bg-scale pictures/background.png
+feh --randomize --bg-fill ~/pictures/backgrounds/*
 exec bspwm
